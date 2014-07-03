@@ -1,0 +1,52 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function ($) {
+    	$.getJSON("niftiList", function(data) {
+            var list = "";
+            $.each(data, function(i, field) {
+                list = field;
+            });
+            var parts = list.split("!");
+            console.log(data);
+            $.each (parts, function (i, field) {
+                if (field.match(".nii.gz")) {
+                    var min = field + ".min.gif";
+                    var tr = $("<tr></tr>");
+                    var td1 = $("<td></td>");
+                    var td2 = $("<td></td>");
+                    var td3 = $("<td></td>");
+                    var checkbox = $("<input type='checkbox' name='selectNii' id='selectNii' value='" + field + "' />");
+                    var name = $("<p> " + field + " </p>");
+                    var img = $("<img src='" + min + "' height='45' width='45'/>");
+                    td1.append(checkbox);
+                    td2.append(name);
+                    td3.append(img);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    $("#niftiTable").append(tr);
+                }
+            });
+        });
+
+		$("#search").click(function () {
+            // var filename = $("#selectNii").find(":selected").text();
+            var filename = $("#selectNii:checked").val();
+            var input2 = $("<input type='hidden' id='filename' name='filename' value='" + filename + "' />");
+            $("#form").append(input2);
+            $("#form").submit();
+        });
+    });
+    </script>
+</head>
+<body>
+	<form action="labeledSearch" id="form">
+		<label>Insert integer label </label><input id="label" name="label" type="text" />
+		<button id="search">Cerca</button>
+	</form>
+	<table id="niftiTable"><tr><th><p>Choose</p></th><th><p>Name</p></th><th><p>Miniature</p></th></tr></table>
+</body>
+</html>
