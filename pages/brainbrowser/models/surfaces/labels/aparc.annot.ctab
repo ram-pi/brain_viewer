@@ -1,36 +1,36 @@
-  0  unknown_25 5 25
-  1  bankssts_25 100 40
-  2  caudalanteriorcingulate_125 100 160
-  3  caudalmiddlefrontal_100 25 0
-  4  corpuscallosum_120 70 50
-  5  cuneus_220 20 100
-  6  entorhinal_220 20 10
-  7  fusiform_180 220 140
-  8  inferiorparietal_220 60 220
-  9  inferiortemporal_180 40 120
- 10  isthmuscingulate_140 20 140
- 11  lateraloccipital_20 30 140
- 12  lateralorbitofrontal_35 75 50
- 13  lingual_225 140 140
- 14  medialorbitofrontal_200 35 75
- 15  middletemporal_160 100 50
- 16  parahippocampal_20 220 60
- 17  paracentral_60 220 60
- 18  parsopercularis_220 180 140
- 19  parsorbitalis_20 100 50
- 20  parstriangularis_220 60 20
- 21  pericalcarine_120 100 60
- 22  postcentral_220 20 20
- 23  posteriorcingulate_220 180 220
- 24  precentral_60 20 220
- 25  precuneus_160 140 180
- 26  rostralanteriorcingulate_80 20 140
- 27  rostralmiddlefrontal_75 50 125
- 28  superiorfrontal_20 220 160
- 29  superiorparietal_20 180 140
- 30  superiortemporal_140 220 220
- 31  supramarginal_80 160 20
- 32  frontalpole_100 0 100
- 33  temporalpole_70 20 170
- 34  transversetemporal_150 150 200
- 35  insula_255 192 32
+  0  unknown                          25   5  25
+  1  bankssts                         25 100  40
+  2  caudalanteriorcingulate         125 100 160
+  3  caudalmiddlefrontal             100  25   0
+  4  corpuscallosum                  120  70  50
+  5  cuneus                          220  20 100
+  6  entorhinal                      220  20  10
+  7  fusiform                        180 220 140
+  8  inferiorparietal                220  60 220
+  9  inferiortemporal                180  40 120
+ 10  isthmuscingulate                140  20 140
+ 11  lateraloccipital                 20  30 140
+ 12  lateralorbitofrontal             35  75  50
+ 13  lingual                         225 140 140
+ 14  medialorbitofrontal             200  35  75
+ 15  middletemporal                  160 100  50
+ 16  parahippocampal                  20 220  60
+ 17  paracentral                      60 220  60
+ 18  parsopercularis                 220 180 140
+ 19  parsorbitalis                    20 100  50
+ 20  parstriangularis                220  60  20
+ 21  pericalcarine                   120 100  60
+ 22  postcentral                     220  20  20
+ 23  posteriorcingulate              220 180 220
+ 24  precentral                       60  20 220
+ 25  precuneus                       160 140 180
+ 26  rostralanteriorcingulate         80  20 140
+ 27  rostralmiddlefrontal             75  50 125
+ 28  superiorfrontal                  20 220 160
+ 29  superiorparietal                 20 180 140
+ 30  superiortemporal                140 220 220
+ 31  supramarginal                    80 160  20
+ 32  frontalpole                     100   0 100
+ 33  temporalpole                     70  20 170
+ 34  transversetemporal              150 150 200
+ 35  insula                          255 192  32

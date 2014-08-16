@@ -13,7 +13,7 @@ $(function() {
  
 	// Load a model into the scene.
   	// viewer.loadModelFromURL("/models/brain-surface.obj");
-    viewer.loadModelFromURL("/models/surfaces/ASCII_surfaces/lh.pial.asc", {
+    viewer.loadModelFromURL("/models/surfaces/ASCII_surfaces/rh.pial.asc", {
       format: "freesurferasc",
       complete: function() {
         alert("Image has been loaded");
@@ -32,9 +32,9 @@ $(function() {
     $("#brainbrowser").click(function(event) {
       var pick_info = viewer.pick();
       if (pick_info) {
-        var x = pick_info.point.x;
-        var y = pick_info.point.y;
-        var z = pick_info.point.z;
+        var x = pick_info.point.x.toPrecision(3);
+        var y = pick_info.point.y.toPrecision(3);
+        var z = pick_info.point.z.toPrecision(3);
         var index = pick_info.index;
         console.log(pick_info);
         var vertex = {x:x, y:y, z:z, index:index};
@@ -43,8 +43,10 @@ $(function() {
           //alert(data.label + data.color); 
           var splitted = data.label.split(".");
           var region = splitted[1];
+          $("#label_index").html(index);
           $("#region").html(region);
           $("#selectedColor").html(data.color);
+          $("#coordinates").html(x + " " + y + " " + z);
         });      
       }
     }); 

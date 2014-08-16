@@ -51,9 +51,10 @@
     counts = data[1].replace(/^\s+/, "").replace(/\s+$/, "").split(/\s+/);
     vertex_count = parseInt(counts[0], 10);
     face_count = parseInt(counts[1], 10);
-    
+
     for (i = 2; i < vertex_count + 2; i++) {
       line = data[i].replace(/^\s+/, "").replace(/\s+$/, "").split(/\s+/);
+      //console.log(line);
       vertices.push(parseFloat(line[0]));
       vertices.push(parseFloat(line[1]));
       vertices.push(parseFloat(line[2]));
