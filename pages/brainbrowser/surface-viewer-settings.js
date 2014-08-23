@@ -100,6 +100,45 @@ $(function() {
             $("#form").submit();
   });
 
+  $("#multiSearch").click(function () {
+            var color = $("#colorsList").html();
+            var filename = $("#selectNii:checked").val();
+            console.log("color to be sended -> " + color + " and filename -> " + filename);
+            var input = $("<input type='hidden' id='color' name='color' value='" + color + "'/>" );
+            var input2 = $("<input type='hidden' id='filename' name='filename' value='" + filename + "' />");
+            $("#form").append(input);
+            $("#form").append(input2);
+            $("#form").attr('action', 'multiLabels');
+            $("#form").submit();
+  });
+
+  $("#clear").click(function() {
+            $("#color").remove();
+            $("#filename").remove();
+            $("#selectedColor").html("Color");
+            $("#colorsList").html("List");
+            $("#coordinates").html("Coordinates");
+            $("#region").html("Region");
+            $("#label_index").html("Index");            
+  });
+
+  $("#add").click(function() {
+    var color1 = $("#selectedColor").html();
+    var splitted = color1.split(" ");
+    var color = splitted[0] + "," + splitted[1] + "," + splitted[2];
+    var list = $("#colorsList").html();
+    if (list.indexOf(color) > -1)
+      alert("You have already insert this color!");
+    else {
+      if (list.indexOf("List") > -1) {
+        list = color;
+      } else {
+        list = list + " " + color;
+      } 
+      $("#colorsList").html(list);
+    }
+  });
+
 });
 
 
