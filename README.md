@@ -1,1 +1,1 @@
-Launch 'npm test' to launch the server.
+Launch 'npm test' to start the server.
